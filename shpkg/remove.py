@@ -5,10 +5,8 @@ import json
 import os
 
 BASE_URL = "https://raw.githubusercontent.com/shpkg/repo/refs/heads/main/uninstall/"
-PACKAGES_FILE = "~/.shpkg/packages.json"
+PACKAGES_FILE = os.path.expanduser("~/.shpkg/packages.json")
 
-@click.command()
-@click.argument("package_name", required=True)
 def remove(package_name):
     """Remove a package."""
     # Construct the URL

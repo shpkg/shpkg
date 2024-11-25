@@ -5,7 +5,6 @@ import subprocess
 
 PACKAGES_FILE = os.path.expanduser("~/.shpkg/packages.json")
 
-@click.command()
 def update_all():
     """Update all installed packages."""
     if os.path.exists(PACKAGES_FILE):

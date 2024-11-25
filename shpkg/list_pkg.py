@@ -4,7 +4,6 @@ import os
 
 PACKAGES_FILE = os.path.expanduser("~/.shpkg/packages.json")
 
-@click.command()
 def list_pkg():
     """List installed packages."""
     if os.path.exists(PACKAGES_FILE):

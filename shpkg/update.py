@@ -4,8 +4,6 @@ import subprocess
 
 BASE_URL = "https://raw.githubusercontent.com/shpkg/repo/refs/heads/main/install/"
 
-@click.command()
-@click.argument("package_name", required=True)
 def update(package_name):
     """Update a package."""
     # Construct the URL
